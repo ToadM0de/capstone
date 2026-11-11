@@ -1,0 +1,140 @@
+.hover {
+    position: absolute;
+    width: 12%;
+    height: 12%;
+    z-index: 10;
+}
+
+.queenHover {
+    top: 75%;
+    left: 40%;
+}
+
+.nest2Hover {
+    top: 50%;
+    left: 70%;
+}
+
+.nest3Hover {
+    top: 50%;
+    left: 70%;
+}
+
+.popup {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    padding: 15px;
+    background: white;
+    border: 2px solid brown;
+    border-radius: 10px;
+    text-align: center;
+    // Makes the popup invisible and unclickable by default
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+// Show popup when hovering over the parent element
+.hover:hover > .popup,
+.hover:focus-within > .popup {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.popup p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.popup button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.eggTimer {
+    position: fixed;
+    display: none;
+    padding: 10px 15px;
+    background: white;
+    border: 2px solid brown;
+    border-radius: 10px;
+    color: brown;
+    font-size: 14px;
+    text-align: center;
+    z-index: 100;
+}
+
+.eggTimer {
+    position: fixed;
+    display: none;
+    padding: 10px 15px;
+    background: white;
+    border: 2px solid brown;
+    border-radius: 10px;
+    color: brown;
+    font-size: 14px;
+    text-align: center;
+    z-index: 100;
+}
+
+.hatchMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    background: white;
+    border: 3px solid brown;
+    border-radius: 12px;
+    color: brown;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 100;
+    display: none;
+}
+
+
+#egg1,
+#egg2,
+#egg3 {
+    pointer-events: none;
+}
+
+/* Invisible egg hover areas */
+.eggArea {
+    position: absolute;
+
+    width: 3%;
+    height: 6%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+    cursor: pointer;
+}
+
+// Targeting specific eggs, helps with keeping page responsive
+.eggArea[egg="egg1"] {
+    left: 67.53%;
+    top: 57.36%;
+}
+
+.eggArea[egg="egg2"] {
+    left: 76.52%;
+    top: 58.45%;
+}
+
+.eggArea[egg="egg3"] {
+    left: 85.02%;
+    top: 61.24%;
+}

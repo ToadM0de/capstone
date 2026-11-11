@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ant Colony</title>
+
+    <link rel="stylesheet" href="sass/style.css" />
+  </head>
+
+  <body>
+    <div class="assets">
+      <!-- Background -->
+      <img src="./assets/background.png" alt="Background" class="background" />
+
+      <!-- Resources -->
+      <div class="resources">
+        <p>Food: <span id="foodCount"></span></p>
+        <p>Workers: <span id="workerCount"></span></p>
+        <p>Leaves: <span id="leafCount"></span></p>
+      </div>
+
+      <!-- Bedroom -->
+      <div class="bedroom">
+        <img src="./assets/bed2.png" alt="First bed upgrade" class="asset" />
+
+        <img src="./assets/bed3.png" alt="Second bed upgrade" class="asset" />
+      </div>
+
+      <!-- Farm -->
+      <div class="farm">
+        <div class="plotArea" plot="plot1"></div>
+        <div class="plotArea locked" plot="plot2"></div>
+        <div class="plotArea locked" plot="plot3"></div>
+        <div class="plotArea locked" plot="plot4"></div>
+
+        <div class="hover unlockPlotArea">
+          <div class="popup">
+            <p id="plotUpgradeTitle">Unlock Plot 2</p>
+            <p>Workers needed: <span id="plotWorkerCost">10</span></p>
+            <button id="unlockPlotBtn">Unlock</button>
+            <p id="plotMessage"></p>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./assets/crops1.png"
+        id="crop1"
+        class="asset hidden"
+        alt="Crop 1"
+      />
+      <img
+        src="./assets/crops2.png"
+        id="crop2"
+        class="asset hidden"
+        alt="Crop 2"
+      />
+      <img
+        src="./assets/crops3.png"
+        id="crop3"
+        class="asset hidden"
+        alt="Crop 3"
+      />
+      <img
+        src="./assets/crops4.png"
+        id="crop4"
+        class="asset hidden"
+        alt="Crop 4"
+      />
+
+      <img
+        src="./assets/plot2.png"
+        alt="First farm upgrade"
+        id="plot2"
+        class="asset hidden"
+      />
+      <img
+        src="./assets/plot3.png"
+        alt="Second farm upgrade"
+        id="plot3"
+        class="asset hidden"
+      />
+      <img
+        src="./assets/plot4.png"
+        alt="Third farm upgrade"
+        id="plot4"
+        class="asset hidden"
+      />
+      <!-- Food Storage -->
+      <div class="foodStorage">
+        <img
+          src="./assets/food1.png"
+          alt="First food storage layer"
+          class="asset"
+        />
+        <img
+          src="./assets/food2.png"
+          alt="Second food storage layer"
+          class="asset"
+        />
+        <img
+          src="./assets/food3.png"
+          alt="Third food storage layer"
+          class="asset"
+        />
+      </div>
+
+      <!-- Nursery -->
+      <div class="nursery">
+        <img
+          src="./assets/nest2.png"
+          alt="Second nest upgrade"
+          id="nest2"
+          class="asset hidden"
+        />
+
+        <img
+          src="./assets/nest3.png"
+          alt="Third nest upgrade"
+          id="nest3"
+          class="asset hidden"
+        />
+
+        <img
+          src="./assets/egg1.png"
+          alt="First egg"
+          id="egg1"
+          class="asset hidden"
+        />
+
+        <img
+          src="./assets/egg2.png"
+          alt="Second egg"
+          id="egg2"
+          class="asset hidden"
+        />
+
+        <img
+          src="./assets/egg3.png"
+          alt="Third egg"
+          id="egg3"
+          class="asset hidden"
+        />
+      </div>
+
+      <!-- Farm timer -->
+      <div id="farmTimer" class="farmTimer">
+        <p id="farmTimerText"></p>
+      </div>
+
+      <!-- Egg hover areas -->
+      <div class="eggArea" egg="egg1"></div>
+      <div class="eggArea" egg="egg2"></div>
+      <div class="eggArea" egg="egg3"></div>
+
+      <!-- Covers -->
+      <div class="covers">
+        <img src="./assets/bedCover.png" alt="Bedroom cover" class="asset" />
+
+        <!-- <img src="./assets/farmCover.png" alt="Farm cover" class="asset" /> -->
+
+        <img
+          src="./assets/foodCover.png"
+          alt="Food storage cover"
+          class="asset"
+        />
+
+        <img src="./assets/forageCover.png" alt="Forage cover" class="asset" />
+
+        <!-- <img
+          src="./assets/nurseryCover.png"
+          alt="Nursery cover"
+          class="asset"
+        /> -->
+      </div>
+
+      <!-- Feeding the queen -->
+      <div class="hover queenHover">
+        <div class="popup">
+          <p>Food needed: <span id="eggCost">5</span></p>
+
+          <p id="eggMessage"></p>
+
+          <button id="produceEgg">Produce Egg</button>
+        </div>
+      </div>
+
+      <!-- Second nest upgrade -->
+      <div class="hover nest2Hover">
+        <div class="popup">
+          <p>Upgrade Nest 2</p>
+
+          <p>Food needed: <span>10</span></p>
+
+          <button id="upgradeNest2">Upgrade</button>
+        </div>
+      </div>
+
+      <!-- Third nest upgrade -->
+      <div class="hover nest3Hover">
+        <div class="popup">
+          <p>Upgrade Nest 3</p>
+
+          <p>Food needed: <span>20</span></p>
+
+          <button id="upgradeNest3">Upgrade</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Egg timer -->
+    <div id="eggTimer" class="eggTimer">
+      <p id="eggTimerText"></p>
+    </div>
+
+    <!-- Egg hatched notification -->
+    <div id="hatchMessage" class="hatchMessage">An egg hatched!</div>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>

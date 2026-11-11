@@ -1,0 +1,55 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html, body {
+ height: 100%
+}
+h1, h2, h3, h4, h5, h6, p {
+ margin-bottom: 16px
+}
+
+// Hide element, ignoring other styles
+.hidden {
+    display: none !important;
+}
+
+.assets {
+    position: relative;
+    width: 100%;
+    // Makes sure the container maintains the correct aspect ratio for the assets
+    aspect-ratio: 172 / 96;
+    overflow: hidden;
+}
+
+.assets img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // prevents blurring for pixel art assets
+    image-rendering: pixelated;
+}
+
+// background image
+.background {
+    z-index: 1;
+}
+
+// assets
+.asset {
+    z-index: 2;
+}
+
+.resources {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 100;
+    padding: 12px;
+    background: white;
+    border-radius: 10px;
+    font-size: 18px;
+}
